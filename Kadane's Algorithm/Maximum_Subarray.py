@@ -1,5 +1,6 @@
+from typing import List
 class Solution:
-    def maxSubArray(self, nums):
+    def maxSubArray(self, nums: List[int]) -> int:
         max_sum = float('-inf')
         cur_sum = 0
         lst = []
@@ -13,7 +14,7 @@ class Solution:
             if cur_sum<0:
                 cur_sum = 0
                 temp = []
-        return max_sum,lst
+        return max_sum
     
 sol = Solution()
 print(sol.maxSubArray(nums=[-4,3,5,2,-1]))
