@@ -14,7 +14,7 @@ class Solution:
             if cur_sum<0:
                 cur_sum = 0
                 temp = []
-        return max_sum
+        return max_sum,lst
     
 sol = Solution()
 print(sol.maxSubArray(nums=[-4,3,5,2,-1]))
