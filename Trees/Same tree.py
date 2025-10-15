@@ -8,13 +8,13 @@ from typing import Optional
 
 
 class Solution:
-    def isSymmetric(self, root: Optional[TreeNode]) -> bool: # type: ignore
-        def sym(root1,root2):
+    def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool: # type: ignore
+        def same(root1,root2):
             if not root1 and not root2:
                 return True
             if not root1 or not root2:
                 return False
-            return sym(root1.left,root2.right) and \
-                   sym(root1.right,root2.left) and \
+            return same(root1.left,root2.left) and \
+                   same(root1.right,root2.right) and \
                    root1.val==root2.val
-        return sym(root.left,root.right)
+        return same(p,q)
