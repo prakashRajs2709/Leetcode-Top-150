@@ -7,4 +7,3 @@ class Solution:
             for j in range(1, i):
                 t[i][j]+=min(t[i-1][j], t[i-1][j-1])
         return min(t[-1])
-        
